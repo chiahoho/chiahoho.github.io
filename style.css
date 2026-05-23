@@ -257,46 +257,49 @@ p {
 
 /* ── Projects ────────────────────────────────── */
 .projects-list {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.25rem;
 }
 
 .project {
-  padding: 2rem 0;
-  border-bottom: 1px solid var(--color-border);
+  padding: 1.5rem;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  transition: box-shadow 0.2s, transform 0.2s;
 }
 
-.project:first-child {
-  padding-top: 0;
-}
-
-.project:last-child {
-  border-bottom: none;
-  padding-bottom: 0;
+.project:hover {
+  box-shadow: 0 4px 20px rgba(120, 126, 179, 0.12);
+  transform: translateY(-3px);
 }
 
 .project h4 {
-  margin-bottom: 0.6rem;
+  margin-bottom: 0;
+  font-size: 0.95rem;
 }
 
 .project p {
-  font-size: 0.9rem;
+  font-size: 0.87rem;
   color: #666;
-  max-width: 620px;
-  margin-bottom: 0.8rem;
+  margin-bottom: 0;
+  flex: 1;
+  line-height: 1.65;
 }
 
 .project a {
   font-size: 0.82rem;
-  color: var(--color-text);
+  color: #787EB3;
   text-decoration: none;
-  border-bottom: 1px solid #ccc;
-  padding-bottom: 1px;
-  transition: border-color 0.15s, color 0.15s;
+  font-weight: 500;
+  transition: opacity 0.15s;
 }
 
 .project a:hover {
-  border-color: var(--color-text);
+  opacity: 0.65;
 }
 
 /* ── Skills ──────────────────────────────────── */
