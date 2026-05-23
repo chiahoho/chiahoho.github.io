@@ -164,14 +164,20 @@ p {
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
   gap: 1rem;
-  padding: 1.1rem 0;
+  padding: 1.1rem 0.5rem;
   background: none;
   border: none;
   cursor: pointer;
   text-align: left;
   color: var(--color-text);
+  border-radius: 6px;
+  transition: background 0.18s, padding-left 0.18s;
+}
+
+.accordion-trigger:hover {
+  background: #f5f3fb;
+  padding-left: 1rem;
 }
 
 .accordion-left {
@@ -200,10 +206,11 @@ p {
 .accordion-icon {
   font-size: 1.1rem;
   font-weight: 300;
-  color: var(--color-muted);
+  color: #787EB3;
   width: 1.2rem;
   text-align: center;
   transition: transform 0.2s;
+  flex-shrink: 0;
 }
 
 .accordion-item.open .accordion-icon {
